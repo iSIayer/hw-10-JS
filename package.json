@@ -1,0 +1,28 @@
+{
+  "name": "hw-10-js",
+  "version": "1.0.0",
+  "description": "**Read in other languages: [Русский](README.md)",
+  "homepage": "https://isiayer.github.io/hw-10-JS/",
+  "scripts": {
+    "start": "parcel src/*.html",
+    "build": "parcel build src/*.html --public-url /hw-10-JS/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iSIayer/hw-10-JS.git"
+  },
+  "author": "Ihor Kolontaievkiy <gamerspeed86@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/iSIayer/hw-10-JS/issues"
+  },
+  "devDependencies": {
+    "parcel": "^2.6.0",
+    "parcel-reporter-clean-dist": "^1.0.4",
+    "posthtml-include": "^1.7.4"
+  },
+  "dependencies": {
+    "lodash.debounce": "^4.0.8",
+    "notiflix": "^3.2.5"
+  }
+}
