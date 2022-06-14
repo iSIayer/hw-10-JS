@@ -10,6 +10,12 @@ body {
   background-color: #fafafa;
   color: #212121;
   line-height: 1.5;
+  height: 100vh;
+  background: linear-gradient(
+    166deg,
+    rgba(16, 98, 218, 1) 19%,
+    rgba(211, 255, 0, 1) 88%
+  );
 }
 
 #search-box {
@@ -17,4 +23,47 @@ body {
   padding: 8px;
   max-width: 320px;
   margin-bottom: 16px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  margin: 15px 0 0 15px;
 }
+
+#search-box:focus,
+#search-box:hover {
+  outline: none;
+  box-shadow: 0px 0px 20px 5px rgba(211, 255, 0, 1);
+}
+
+.country__list {
+  display: flex;
+  align-items: center;
+}
+
+.country__flag {
+  width: 100px;
+  margin-right: 15px;
+}
+
+.country__attributes {
+  font-weight: 800;
+  margin-right: 15px;
+}
+
+.country__attributes--description {
+  font-weight: 500;
+  margin-left: 10px;
+}
+
+/* .country-info {
+  font-size: 20px;
+  background-color: #fafafa;
+  padding: 16px;
+  border-radius: 7px;
+  margin: 16px 0;
+  box-shadow: 0px 0px 20px 5px rgb(35, 36, 33);
+  width: 100vh;
+} */
+
+/* .is-hidden {
+  opacity: 0;
+} */
