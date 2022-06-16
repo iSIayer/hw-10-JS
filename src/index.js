@@ -15,7 +15,7 @@ refs.inputValue.addEventListener(
   'input',
   debounce(searchCountry, DEBOUNCE_DELAY)
 );
-// refs.valueInputCountry.addEventListener('input', toggleWindowBg);
+refs.valueInputCountry.addEventListener('input', toggleWindowBg);
 
 function searchCountry(evt) {
   const name = evt.target.value.trim();
@@ -27,19 +27,19 @@ function searchCountry(evt) {
 }
 
 function renderCountryCard(country) {
-  if (country.length > 10) {
+  if (country.length >= 10) {
     Notiflix.Notify.info(
       `Too many matches found. Please enter a more specific name.`
     );
   }
-  if (country.length > 1 && country.length < 10) {
+  if (country.length > 1 && country.length <= 10) {
     const markup = countryList(country);
     refs.valueInputCountry.innerHTML = markup;
-    // refs.valueInputCountry.classList.add('is-hidden');
+    refs.valueInputCountry.classList.remove('is-hidden');
   } else if (country.length === 1) {
     const markup = countryCard(country);
     refs.valueInputCountry.innerHTML = markup;
-    // refs.valueInputCountry.classList.remove('is-hidden');
+    refs.valueInputCountry.classList.add('is-hidden');
   }
 }
 
@@ -52,6 +52,6 @@ function clearRender() {
   refs.valueInputCountry.innerHTML = '';
 }
 
-// function toggleWindowBg() {
-//   refs.inputValue.classList.toggle('is-hidden');
-// }
+function toggleWindowBg() {
+  refs.inputValue.classList.toggle('is-hidden');
+}
